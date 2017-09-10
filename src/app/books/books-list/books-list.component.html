@@ -1,3 +1,20 @@
-<p>
-  <span>books list</span>
-</p>
+<table class="table">
+  <thead>
+  <tr>
+    <th>#</th>
+    <th>genre</th>
+    <th>year</th>
+    <th>title</th>
+    <th>author</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let book of books">
+    <td>{{book.id}}</td>
+    <td>{{book.genre}}</td>
+    <td>{{book.year}}</td>
+    <td>{{book.title}}</td>
+    <td>{{book.author}}</td>
+  </tr>
+  </tbody>
+</table>
