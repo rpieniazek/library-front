@@ -5,15 +5,15 @@
 </nav>
 <div class="container-fluid">
   <div class="row">
-    <nav class="col-lg-3 bg-faded sidebar ">
+    <nav class="col-lg-2 bg-faded sidebar ">
       <ul class="nav flex-column">
-        <a class="nav-link active" href="#">Books</a>
+        <a class="nav-link active" href="#" routerLink="/books">Books</a>
         <a class="nav-link" href="#">Authors</a>
         <a class="nav-link" href="#">Libraries</a>
       </ul>
     </nav>
-    <main class="col-lg-9 pt-3">
-      content
+    <main class="col-lg-10 pt-3">
+      <router-outlet></router-outlet>
     </main>
   </div>
 </div>
