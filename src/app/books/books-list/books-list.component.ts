@@ -15,6 +15,10 @@ export class BooksListComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getBooks();
+  }
+
+  private getBooks() {
     this.bookService.getAllBooks()
       .subscribe(response => {
         this.books = response;
@@ -23,6 +27,8 @@ export class BooksListComponent implements OnInit {
   }
 
   delete(id: number) {
+    this.bookService.delete(id)
+      .subscribe(() => this.getBooks());
     console.log('deleting');
   }
 

@@ -13,4 +13,7 @@ export class BookService {
     return this.http.get<Book[]>('http://localhost:8888/services/books');
   }
 
+  delete(id: number) {
+    return this.http.delete('http://localhost:8888/services/book/' + id);
+  }
 }
