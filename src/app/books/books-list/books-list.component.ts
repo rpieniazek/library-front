@@ -15,10 +15,18 @@ export class BooksListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.books = this.bookService.getAllBooks()
+    this.bookService.getAllBooks()
       .subscribe(response => {
         this.books = response;
         console.log(this.books);
       });
+  }
+
+  delete(id: number) {
+    console.log('deleting');
+  }
+
+  edit() {
+    console.log('edit');
   }
 }

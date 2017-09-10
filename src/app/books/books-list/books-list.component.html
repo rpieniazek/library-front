@@ -6,6 +6,7 @@
     <th>year</th>
     <th>title</th>
     <th>author</th>
+    <th>action</th>
   </tr>
   </thead>
   <tbody>
@@ -15,6 +16,10 @@
     <td>{{book.year}}</td>
     <td>{{book.title}}</td>
     <td>{{book.author}}</td>
+    <td>
+      <button class="btn btn-warning" (click)="edit()">Edit</button>
+      <button class="btn btn-danger" (click)="delete(book.id)">Delete</button>
+    </td>
   </tr>
   </tbody>
 </table>
