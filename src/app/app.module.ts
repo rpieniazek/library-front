@@ -5,6 +5,8 @@ import {AppComponent} from './app.component';
 import {BooksComponent} from './books/books.component';
 import {BooksListComponent} from './books/books-list/books-list.component';
 import {RouterModule, Routes} from "@angular/router";
+import {HttpClientModule} from "@angular/common/http";
+import {BookService} from "./books/book.service";
 
 const appRouter: Routes = [{
   path: 'books', component: BooksComponent
@@ -18,9 +20,10 @@ const appRouter: Routes = [{
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRouter, {enableTracing: true})
+    RouterModule.forRoot(appRouter),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [BookService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
