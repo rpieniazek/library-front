@@ -1,0 +1,1 @@
+Tworzenie hierarchi componentów -> czy wszystkie componenty muszą być zadeklarowane w module? W Ang.1.6  można było tworzyc componenty agregujace inne.

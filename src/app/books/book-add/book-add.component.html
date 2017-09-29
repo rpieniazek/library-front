@@ -1,0 +1,46 @@
+<h1> Adding new  book</h1>
+<form #bookForm="ngForm"
+      (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="title">
+      Input book name :
+    </label>
+    <input id="title"
+           [(ngModel)]="book.title"
+           name="title"
+           required
+           #title=ngModel>
+    <span [hidden]="title.valid || title.pristine" class="alert alert-danger">
+      Title is required
+    </span>
+  </div>
+  <div class="form-group">
+    <label for="title">
+      Input book year :
+    </label>
+    <input id="year"
+           [(ngModel)]="book.year"
+           name="year"
+           required
+           #year=ngModel
+            type="text">
+    <span [hidden]="year.valid || year.pristine" class="alert alert-danger">
+      Year is required
+    </span>
+  </div>
+  <div class="form-group">
+    <label for="author">
+      Input book author :
+    </label>
+    <input id="author"
+           [(ngModel)]="book.author"
+           name="author"
+           required
+           #author=ngModel>
+    <span [hidden]="title.valid || title.pristine" class="alert alert-danger">
+      Author is required
+    </span>
+  </div>
+  <button type="submit" class="btn btn-success" [disabled]="!bookForm.form.valid">Add new Book</button>
+
+</form>

@@ -7,21 +7,30 @@ import {BooksListComponent} from './books/books-list/books-list.component';
 import {RouterModule, Routes} from "@angular/router";
 import {HttpClientModule} from "@angular/common/http";
 import {BookService} from "./books/book.service";
+import {BookAddComponent} from './books/book-add/book-add.component';
+import {FormsModule} from "@angular/forms";
 
-const appRouter: Routes = [{
-  path: 'books', component: BooksComponent
-}];
+const appRouter: Routes = [
+  {
+    path: 'books', component: BooksComponent,
+  },
+  {
+    path: 'book/add', component: BookAddComponent
+  }
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     BooksComponent,
-    BooksListComponent
+    BooksListComponent,
+    BookAddComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRouter),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [BookService],
   bootstrap: [AppComponent]
