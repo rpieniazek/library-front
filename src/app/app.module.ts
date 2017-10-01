@@ -9,6 +9,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {BookService} from "./books/book.service";
 import {BookAddComponent} from './books/book-add/book-add.component';
 import {FormsModule} from "@angular/forms";
+import {AuthorService} from "./author/author.service";
 
 const appRouter: Routes = [
   {
@@ -32,7 +33,8 @@ const appRouter: Routes = [
     HttpClientModule,
     FormsModule
   ],
-  providers: [BookService],
+  providers: [BookService,
+    AuthorService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -13,6 +13,11 @@ export class BookService {
     return this.http.get<Book[]>('http://localhost:8888/services/books');
   }
 
+  saveNewBook(book: Book) {
+    this.http.post('http://localhost:8888/services/book/', book)
+      .subscribe();
+  }
+
   delete(id: number) {
     return this.http.delete('http://localhost:8888/services/book/' + id);
   }
